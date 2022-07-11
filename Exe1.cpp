@@ -1,8 +1,11 @@
 /*
-Aunthor: Han Win Tun
-Student ID: 300362344
-Purpose: Solution to exercise 3
-Date: June 6, 2022
+Calculate carrier charges on user input
+--------------------------------------------------
+Starting time of call      -       Rate per Min
+00:00-06:59                -        0.05
+07:00-19:00                -        0.45
+19:01-23:59                -        0.20
+--------------------------------------------------
 */
 
 #include <iostream>
