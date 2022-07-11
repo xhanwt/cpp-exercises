@@ -1,3 +1,6 @@
+/*
+Calculate the average of tests - requests 6 test scores, drops lowest score and calculates average
+*/
 #include <iostream>
 #include <iomanip>
 using namespace std;
