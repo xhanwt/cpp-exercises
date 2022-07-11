@@ -1,0 +1,52 @@
+// This progam expands an array
+#include<iostream>
+#include <iomanip>
+using namespace std;
+
+// Function Prototypes
+int* expandArray(int[], int);
+void showArray(int[], int);
+
+
+int main() {
+  const int SIZE = 5;
+  int values[SIZE] = { 1, 2, 3, 4, 5 };
+  // Display the contents of the array.
+  cout << "The contents of the original array are:\n";
+  showArray(values, SIZE);
+  // Make an expanded copy of the array.
+  int* arrCopy = expandArray(values, SIZE);
+  // Display the contents of the new array.
+  cout << "The contents of the expanded array are:\n";
+  showArray(arrCopy, (SIZE * 2));
+
+  // Delete the dynamically allocated array 
+  delete [] arrCopy;
+  arrCopy = nullptr;  // 0x0
+  
+  return 0;
+}
+
+void showArray(int arr[], int size){
+  // Show each element in array
+  for(int i = 0; i < size; i++){
+    cout << setw(3) << arr[i];
+  }
+  cout << endl;
+}
+
+int* expandArray(int arr[], int size){
+  
+    const int newSize = size * 2;
+    int *newArray = new int[newSize];
+
+    for (int i = 0; i < newSize; i++)
+    {
+        if (i >= size)
+            *(newArray + i) = 0;
+        else
+            *(newArray + i) = arr[i];
+    }
+
+    return newArray;
+}
