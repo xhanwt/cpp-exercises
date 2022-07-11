@@ -1,8 +1,5 @@
 /*
-Aunthor: Han Win Tun
-Student ID: 300362344
-Purpose: Solution to exercise 6
-Date: June 6, 2022
+C++ program request inputs to create HTML file
 */
 
 #include <iostream>
